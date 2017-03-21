@@ -4,7 +4,6 @@
 import cStringIO
 import urllib
 import qrcode
-import pdb
 from PIL import Image
 from util import Util
 from log import Logger
@@ -51,9 +50,8 @@ class QRCodeConverter:
         outputname = self.qrcode_img_name_prefix + str(self.util.now()) + self.qrcode_img_name_surffix
 
         try:
-            pdb.set_trace()
             inner_img_file = self.fetch_file(self.inner_img_path)
-            inner_img = Image.open(inner_img_file).convert('RGBA')
+            inner_img = Image.open(inner_img_file.read()).convert('RGBA')
 
             (width, height) = inner_img.size
 
