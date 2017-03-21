@@ -7,7 +7,7 @@ from QRCodeConverter import QRCodeConverter
 def parseArgv():
     if len(sys.argv) < 3:
         print("Incorrect args, try:")
-        print('./generate.py ./logo.png "http://github.com"')
+        print('./app/run.py ./logo.png "http://github.com"')
         sys.exit(0)
 
     img_path = sys.argv[1]

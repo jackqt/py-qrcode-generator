@@ -2,7 +2,7 @@
 ## Command Line
 To use this library, please give 2 parameters at lease, for example:
 ```
-python app/run.py [inner_logo_path] [qr_content]
+python app/run.py [inner_logo_path] [qr_content] [width] [height]
 ```
 *Note:* The 1st param `inner_logo_path` could be absolute local path, or a URL
 
@@ -25,3 +25,4 @@ the qrcode into local path
 
 # Known Issue
 + Does not handle the case if do not give `inner_logo_path` in the command line
++ Param `content` should be mandatory
