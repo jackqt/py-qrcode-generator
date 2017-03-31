@@ -22,18 +22,12 @@ def parseArgv():
     }
 
 def handle():
-    def successCallback(data):
-        pass
-
-    def failureCallback():
-        pass
-
     parser = parseArgv()
     converter = QRCodeConverter()
     converter.set_inner_img_path(parser['img_path'])
     converter.set_qrcode_content(parser['content'])
     converter.set_qrcode_size(parser['size'])
-    converter.process(successCallback, failureCallback)
+    converter.process()
 
 if __name__ == '__main__':
     handle()
